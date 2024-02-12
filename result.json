@@ -1,0 +1,35 @@
+{
+  "process": "sequential",
+  "agentResults": [
+    {
+      "id": "C_vrswXEYnib_1xABvTSI",
+      "role": "Wallet",
+      "result": "micro-agi-dev.testnet",
+      "task": {
+        "id": "OKGbcMaB3V_pY_CFO8iNV",
+        "status": "success",
+        "result": "micro-agi-dev.testnet",
+        "addedAt": 1707764180799,
+        "completedAt": 1707764185111,
+        "children": {
+          "props": {
+            "children": "Return the account address connected to the configured wallet. Your output should be the conncted account."
+          }
+        }
+      }
+    },
+    {
+      "id": "pgVdtv5HjKp16L4HbniBU",
+      "role": "Wallet",
+      "result": "The token has been successfully minted.",
+      "task": {
+        "id": "pug_KfzlTBr0gN_9LrUxK",
+        "status": "success",
+        "result": "The token has been successfully minted.",
+        "addedAt": 1707764180799,
+        "completedAt": 1707764200086,
+        "children": { "props": { "children": "Mint a token" } }
+      }
+    }
+  ]
+}

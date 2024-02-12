@@ -1,0 +1,16 @@
+{
+  "name": "near-autonomous-wallet",
+  "module": "index.tsx",
+  "type": "module",
+  "scripts": {
+    "start": "AIJSX_LOG=debug bun run index.tsx"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0"
+  },
+  "dependencies": {
+    "ai-jsx": "0.29.0",
+    "micro-agi": "0.0.0-alpha.28",
+    "near-api-js": "^3.0.2"
+  }
+}
