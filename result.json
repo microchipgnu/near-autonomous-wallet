@@ -2,32 +2,49 @@
   "process": "sequential",
   "agentResults": [
     {
-      "id": "C_vrswXEYnib_1xABvTSI",
+      "id": "F2k10mkt8gz-a8ica293Y",
       "role": "Wallet",
-      "result": "micro-agi-dev.testnet",
+      "result": "The connected account is \"micro-agi-dev.testnet\".",
       "task": {
-        "id": "OKGbcMaB3V_pY_CFO8iNV",
+        "id": "F4YQPFzu2vrq5dFmvn2Sp",
         "status": "success",
-        "result": "micro-agi-dev.testnet",
-        "addedAt": 1707764180799,
-        "completedAt": 1707764185111,
+        "result": "The connected account is \"micro-agi-dev.testnet\".",
+        "addedAt": 1707784520251,
+        "completedAt": 1707784525292,
         "children": {
           "props": {
-            "children": "Return the account address connected to the configured wallet. Your output should be the conncted account."
+            "children": "Answer the following question \"What's connected account?\""
           }
         }
       }
     },
     {
-      "id": "pgVdtv5HjKp16L4HbniBU",
+      "id": "8Zy4rn2BMGItTfllDrBgX",
       "role": "Wallet",
-      "result": "The token has been successfully minted.",
+      "result": "The connected account balance is 49.82 NEAR",
       "task": {
-        "id": "pug_KfzlTBr0gN_9LrUxK",
+        "id": "xCOe8198jdWR3RN_tBoGg",
         "status": "success",
-        "result": "The token has been successfully minted.",
-        "addedAt": 1707764180799,
-        "completedAt": 1707764200086,
+        "result": "The connected account balance is 49.82 NEAR",
+        "addedAt": 1707784520251,
+        "completedAt": 1707784527709,
+        "children": {
+          "props": {
+            "children": "Answer the following question \"What's the balance of the connected account?\""
+          }
+        }
+      }
+    },
+    {
+      "id": "O339ag6w5nQ5aR6SNOWZQ",
+      "role": "Wallet",
+      "result": "The token minting was successful. The transaction hash is HGg4aH95ujwimB4oVX5W7UuS85jZkhTtUNMC2kkSXBba. You can see more information on https://testnet.nearblocks.io/txns/HGg4aH95ujwimB4oVX5W7UuS85jZkhTtUNMC2kkSXBba",
+      "task": {
+        "id": "Otcn49UEHPplIQYhc5QrW",
+        "status": "success",
+        "result": "The token minting was successful. The transaction hash is HGg4aH95ujwimB4oVX5W7UuS85jZkhTtUNMC2kkSXBba. You can see more information on https://testnet.nearblocks.io/txns/HGg4aH95ujwimB4oVX5W7UuS85jZkhTtUNMC2kkSXBba",
+        "addedAt": 1707784520251,
+        "completedAt": 1707784557797,
         "children": { "props": { "children": "Mint a token" } }
       }
     }

@@ -3,13 +3,16 @@
   "module": "index.tsx",
   "type": "module",
   "scripts": {
-    "start": "AIJSX_LOG=debug bun run index.tsx"
+    "start": "AIJSX_LOG=debug bun run index.tsx | bunx pino-pretty"
   },
   "devDependencies": {
     "@types/bun": "^1.0.0"
   },
   "dependencies": {
+    "@mintbase-js/rpc": "^0.5.5-beta.0",
+    "@types/bn.js": "^5.1.5",
     "ai-jsx": "0.29.0",
+    "bn.js": "^5.2.1",
     "micro-agi": "0.0.0-alpha.28",
     "near-api-js": "^3.0.2"
   }

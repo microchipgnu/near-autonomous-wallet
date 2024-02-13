@@ -2,7 +2,13 @@
 
 This project is an example of a NEAR autonomous agent, leveraging the capabilities of [micro-agi](https://github.com/microchipgnu/micro-agi), a framework for building artificial intelligent teams and agents.
 
-This example is based on the [micro-agi starter](https://github.com/microchipgnu/micro-agi-starter). Give [micro-agi](https://github.com/microchipgnu/micro-agi) a star.
+
+
+⭐️ Give [micro-agi](https://github.com/microchipgnu/micro-agi) a star.
+
+![](/assets/banner.png)
+
+---
 
 ## Features
 
@@ -36,3 +42,7 @@ OPENAI_API_KEY=ollama-no-need-api-key
 NEAR_ACCOUNT_ID=
 NEAR_ACCOUNT_FULL_ACCESS_KEY=
 ```
+
+---
+
+This example is based on the [micro-agi starter](https://github.com/microchipgnu/micro-agi-starter). 
