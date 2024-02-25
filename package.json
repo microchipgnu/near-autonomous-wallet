@@ -3,7 +3,8 @@
   "module": "index.tsx",
   "type": "module",
   "scripts": {
-    "start": "AIJSX_LOG=debug bun run index.tsx | bunx pino-pretty"
+    "start": "AIJSX_LOG=debug bun run index.tsx | bunx pino-pretty",
+    "setup": "bun run setup.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.0.0"
@@ -14,6 +15,8 @@
     "ai-jsx": "0.29.0",
     "bn.js": "^5.2.1",
     "micro-agi": "0.0.0-alpha.28",
-    "near-api-js": "^3.0.2"
+    "near-api-js": "^3.0.2",
+    "near-seed-phrase": "^0.2.0",
+    "open": "^10.0.3"
   }
 }
