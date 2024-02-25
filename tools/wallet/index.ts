@@ -1,5 +1,4 @@
 import { getBalance } from "@mintbase-js/rpc";
-import { BN } from "bn.js";
 import * as nearAPI from "near-api-js";
 
 const { keyStores, KeyPair } = nearAPI;
@@ -13,8 +12,6 @@ const connectionConfig = {
   helperUrl: "https://helper.testnet.near.org",
   explorerUrl: "https://testnet.nearblocks.io",
 };
-
-const PRIVATE_KEY = process.env.NEAR_ACCOUNT_FULL_ACCESS_KEY!;
 
 const Wallet = {
   GetWallet: {
@@ -49,27 +46,33 @@ const Wallet = {
     name: "mintToken",
     description: "Mint a token",
     callback: async () => {
-      const nearAccountId = process.env.NEAR_ACCOUNT_ID!;
-      const keyPair = KeyPair.fromString(PRIVATE_KEY);
-
-      await myKeyStore.setKey("testnet", nearAccountId, keyPair);
-
-      const nearConnection = await nearAPI.connect(connectionConfig);
-      const account = await nearConnection.account(nearAccountId);
-
       try {
-        const result = await account.functionCall({
-          methodName: "mint",
-          contractId: "1.minsta.mintbus.testnet",
-          args: {
-            metadata: '{"media":"YK-UNJYRmXK9INoxBUPSn-pDEyiT_7InC95-vN3wmSU"}',
-            nft_contract_id: "minsta.mintspace2.testnet",
+        const action = {
+          type: "FunctionCall",
+          params: {
+            methodName: "mint",
+            contractId: "1.minsta.mintbus.testnet",
+            args: {
+              metadata:
+                '{"media":"YK-UNJYRmXK9INoxBUPSn-pDEyiT_7InC95-vN3wmSU"}',
+              nft_contract_id: "minsta.mintspace2.testnet",
+            },
+            gas: "200000000000000",
+            deposit: "10000000000000000000000"
           },
-          gas: new BN("300000000000000"),
-          attachedDeposit: new BN("10000000000000000000000"),
-        });
+        };
 
-        return `Token minted. The transaction hash is ${result.transaction_outcome.id}. You can see more information on https://testnet.nearblocks.io/txns/${result.transaction_outcome.id}`;
+
+        const txArgs = encodeURIComponent(
+          JSON.stringify({
+            receiverId: "1.minsta.mintbus.testnet",
+            actions: [action],
+          })
+        );
+
+        const link = `https://testnet.wallet.mintbase.xyz/sign-transaction?transactions_data=[${txArgs}]`;
+
+        return `Token minted at ${link}`;
       } catch (error) {
         console.log(error);
         return "Token failed to mint";
